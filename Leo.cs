@@ -6,21 +6,9 @@ namespace Zoo
 {
     class Leo : Animal
     {
-        int dieUnder;
-        public Leo(int healthPoints, int dieUnder) : base(healthPoints)
+        public Leo(int healthPoints, int dieUnder) : base(healthPoints, dieUnder)
         {
-            this.dieUnder = dieUnder;
-        }
-        public override bool IsAlive()
-        {
-            bool isAlive = true;
-
-            if(healthPoints < dieUnder)
-            {
-                isAlive = false;
-            }
-
-            return isAlive;
+        
         }
     }
 }

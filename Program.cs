@@ -68,7 +68,6 @@ namespace Zoo
                     }
                 }
             }
-
             Console.WriteLine("There are {0} live elephants, {1} live leos, {2} live monkeys.", liveElephants, liveLeos, liveMonkeys);
         }
     }

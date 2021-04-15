@@ -8,12 +8,12 @@ namespace Zoo
     abstract class Animal
     {
         public int healthPoints;
-
-        public Animal(int healthPoints)
+        public int dieUnder;
+        public Animal(int healthPoints, int dieUnder)
         {
             this.healthPoints = healthPoints;
+            this.dieUnder = dieUnder;
         }
-
         public void Starve(int healthPointsToRemove)
         {
             healthPoints -= healthPointsToRemove;
@@ -22,6 +22,15 @@ namespace Zoo
         {
             healthPoints += healthPointToAdd;
         }
-        public abstract bool IsAlive();
+        public bool IsAlive()
+        {
+            bool isAlive = true;
+
+            if (healthPoints < dieUnder)
+            {
+                isAlive = false;
+            }
+            return isAlive;
+        }
     }
 }
